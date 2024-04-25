@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Boutique Website</title>
+
+<style>
+body {
+background: linear-gradient(45deg, #ff9a9e, #fad0c4, #f0f, #caffbf, #9bf6ff);
+font-family: Arial, sans-serif;
+}
+
+header {
+background-color: #333;
+color: white;
+padding: 20px;
+}
+
+nav a {
+color: white;
+padding: 10px;
+text-decoration: none;
+}
+
+footer {
+background-color: #333;
+color: white;
+text-align: center;
+padding: 20px;
+}
+
+form {
+max-width: 400px;
+margin: 20px auto;
+padding: 20px;
+border: 1px solid #ccc;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Boutique</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Products</a>
+</nav>
+
+</header>
+
+<main>
+
+<section id="home">
+<h2>Welcome!</h2>
+<p>Home page content here.</p>
+</section>
+
+<section id="products">
+<h2>Our Products</h2>
+
+
+<div class="product">
+  <!-- product details -->
+</div>
+</section>
+
+<form>
+
+<label for="name">Name:</label>
+<input type="text" id="name">
+
+<label for="email">Email:</label>
+<input type="email" id="email">
+
+<button type="submit">Submit</button>
+</form>
+
+</main>
+
+<footer>
+<p>&copy; 2023 Boutique</p>
+</footer>
+
+<script>
+
+// Form validation
+function validateForm() {
+// Get form values
+let name = document.getElementById('name').value;
+let email = document.getElementById('email').value;
+
+// Validate name
+if(name == '') {
+alert('Please enter your name');
+return false;
+}
+
+// Validate email
+if(email == '') {
+alert('Please enter your email');
+return false;
+}
+
+// Form is valid, submit
+return true;
+}
+
+// Toggle product details
+function toggleProduct(id) {
+let product = document.getElementById(id);
+product.classList.toggle('open');
+}
+
+</script>
+
+</body>
+</html>
